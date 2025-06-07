@@ -16,21 +16,18 @@ import java.util.Set;
 public class SudokuValidator {
 
     public static boolean isValidSudoku(char[][] board) {
-        // Verificar filas
         for (int i = 0; i < 9; i++) {
             if (!isValidRow(board, i)) {
                 return false;
             }
         }
 
-        // Verificar columnas
         for (int j = 0; j < 9; j++) {
             if (!isValidColumn(board, j)) {
                 return false;
             }
         }
 
-        // Verificar subcuadros 3x3
         for (int boxRow = 0; boxRow < 9; boxRow += 3) {
             for (int boxCol = 0; boxCol < 9; boxCol += 3) {
                 if (!isValidSubgrid(board, boxRow, boxCol)) {

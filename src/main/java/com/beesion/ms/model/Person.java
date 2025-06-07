@@ -1,15 +1,16 @@
 package com.beesion.ms.model;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 
 @Entity
-public class Person {
 
-	private Long id;
-	private String name;
+public class Person{
+   	public Long id;
+	public String name;
 
 	@Id
 	@SequenceGenerator(name = "PersonIdGenerator")
